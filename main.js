@@ -17,6 +17,21 @@ const getData = async (params) => {
 
 getData()
 
+const deleteData = async (id) => {
+  try {
+    await axios.delete(`${api}/${id}`);
+    getData();
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+
+ 
+
+
+
+
 function render (data){
 tbody.innerHTML="";
 data.forEach(element => {
@@ -48,6 +63,10 @@ data.forEach(element => {
     role.textContent=element.role
     tr.append(name,title,email,role,action)
     tbody.append(tr)
+
+       deletebtn.onclick = () => {
+      deleteData(element.id);
+    };
 });
 
 }
