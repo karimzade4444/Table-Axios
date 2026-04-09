@@ -87,6 +87,11 @@ data.forEach(element => {
     tbody.append(tr)
     editbtn.onclick=()=>{
     editmodal.style.display="block"
+    editForm.id.value=element.id
+    editForm.name.value = element.name;
+    editForm.title.value=element.title
+    editForm.email.value=element.email
+    editForm.role.value=element.role
     Closem.onclick=()=>{
        editmodal.style.display="none" 
     }
@@ -118,8 +123,14 @@ CreatForm.onsubmit = (event) => {
 };
 
 
-  editform.onsubmit = (event) => {
+  editForm.onsubmit = (event) => {
         event.preventDefault();
-        let formedData = Object.fromEntries(new FormData(editform));
-        editData(formedData, editform.id.value);
+        let formedData = Object.fromEntries(new FormData(editForm));
+        editData(formedData, editForm.id.value);
+         editmodal.style.display="none" 
       };
+
+
+      search.oninput = () => {
+  getData({ name: searchname.value });
+};
