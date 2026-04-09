@@ -2,6 +2,9 @@ let api = "https://69d2798a5043d95be971eb73.mockapi.io/api/data"
 
 let container = document.querySelector(".container")
 let tbody = document.querySelector(".tbody")
+let creatmodal = document.querySelector(".creatmodal")
+let addtag = document.querySelector(".addtag")
+let Closeml = document.querySelector(".Closeml")
 
 const getData = async (params) => {
   try {
@@ -71,3 +74,10 @@ data.forEach(element => {
 
 }
 
+
+addtag.onclick=()=>{
+    creatmodal.style.display="block"
+    Closeml.onclick=()=>{
+        creatmodal.style.display="none"
+    }
+}
