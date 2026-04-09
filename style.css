@@ -41,3 +41,71 @@ table{
 }
 
 
+.creatmodal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: none;
+  z-index: 999;
+  transition: 0.5s ease;
+}
+
+.crmodal {
+  position: absolute;
+  width: 30%;
+  max-width: 600px;
+  height: 550px;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  border: 2px solid black;
+  padding-bottom: 20px;
+}
+
+.crmodaltop {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CreatForm{
+    margin: 10px 30px;
+    color: rgb(78, 78, 78);
+}
+.Creat {
+  width: 150px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: rgb(163, 163, 252);
+  border: 0px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.Closeml {
+  width: 150px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: white;
+  border: 0px;
+  color: rgb(163, 163, 252);
+  font-size: 18px;
+  cursor: pointer;
+  
+}
+.st{
+    margin-top: 10px;
+    line-height: 2;
+}
+
+.closesave{
+    margin-top: 50px;
+    margin-left: 40px;
+}
