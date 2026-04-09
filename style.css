@@ -31,3 +31,11 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+
+table{
+    width: 90%;
+    margin: auto;
+    background-color: rgb(46, 46, 229);
+    color: white;
+}
