@@ -5,6 +5,9 @@ let tbody = document.querySelector(".tbody")
 let creatmodal = document.querySelector(".creatmodal")
 let addtag = document.querySelector(".addtag")
 let Closeml = document.querySelector(".Closeml")
+let CreatForm = document.querySelector(".CreatForm")
+let editForm =document.querySelector(".editForm")
+let Closem = document.querySelector(".Closem")
 
 const getData = async (params) => {
   try {
@@ -29,9 +32,24 @@ const deleteData = async (id) => {
   }
 };
 
+const creatData = async (data) => {
+  try {
+    await axios.post(api, data);
+    getData();
+  } catch (error) {
+    console.error(error);
+  }
+};
 
- 
 
+const editData = async (data, id) => {
+  try {
+    await axios.put(`${api}/${id}`, data);
+    getData();
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 
 
@@ -81,3 +99,12 @@ addtag.onclick=()=>{
         creatmodal.style.display="none"
     }
 }
+
+
+CreatForm.onsubmit = (event) => {
+  event.preventDefault();
+  let formcrData = Object.fromEntries(new FormData(CreatForm));
+  creatData(formcrData);
+  creatmodal.style.display="none"
+  CreatForm.reset();
+};
