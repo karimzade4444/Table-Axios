@@ -9,6 +9,7 @@ let CreatForm = document.querySelector(".CreatForm")
 let editForm =document.querySelector(".editForm")
 let Closem = document.querySelector(".Closem")
 let editmodal = document.querySelector(".editmodal")
+let search = document.querySelector(".search")
 
 const getData = async (params) => {
   try {
@@ -132,5 +133,5 @@ CreatForm.onsubmit = (event) => {
 
 
       search.oninput = () => {
-  getData({ name: searchname.value });
+  getData({ name: search.value });
 };
