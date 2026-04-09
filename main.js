@@ -8,6 +8,7 @@ let Closeml = document.querySelector(".Closeml")
 let CreatForm = document.querySelector(".CreatForm")
 let editForm =document.querySelector(".editForm")
 let Closem = document.querySelector(".Closem")
+let editmodal = document.querySelector(".editmodal")
 
 const getData = async (params) => {
   try {
@@ -84,6 +85,13 @@ data.forEach(element => {
     role.textContent=element.role
     tr.append(name,title,email,role,action)
     tbody.append(tr)
+    editbtn.onclick=()=>{
+    editmodal.style.display="block"
+    Closem.onclick=()=>{
+       editmodal.style.display="none" 
+    }
+    }
+
 
        deletebtn.onclick = () => {
       deleteData(element.id);
@@ -108,3 +116,10 @@ CreatForm.onsubmit = (event) => {
   creatmodal.style.display="none"
   CreatForm.reset();
 };
+
+
+  editform.onsubmit = (event) => {
+        event.preventDefault();
+        let formedData = Object.fromEntries(new FormData(editform));
+        editData(formedData, editform.id.value);
+      };

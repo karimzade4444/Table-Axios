@@ -109,3 +109,33 @@ table{
     margin-top: 50px;
     margin-left: 40px;
 }
+
+
+.editmodal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: none;
+  z-index: 999;
+  transition: 0.5s ease;
+}
+.Closem {
+  width: 150px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: white;
+  border: 0px;
+  color: rgb(163, 163, 252);
+  font-size: 18px;
+  cursor: pointer;
+  
+}
+
+.editForm{
+    margin: 10px 30px;
+    color: rgb(78, 78, 78);
+}
