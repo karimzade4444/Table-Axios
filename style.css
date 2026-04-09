@@ -6,4 +6,28 @@ body{
     background-color: rgb(227, 227, 250);
 }
 
-.container{}
+.top{
+    padding: 70px;
+}
+.top h1{
+    font-size: 50px;
+    color: rgb(51, 51, 169);
+}
+
+.middle{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 30px;
+}
+
+.mLeft{
+    display: flex;
+    gap: 20px;
+    text-decoration: underline;
+}
+.mRight{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
